@@ -19,7 +19,7 @@
         }
         stage("Build Image"){
             steps{
-                sh 'docker build -t my-node-app:1.0 .'
+                sh 'docker build -t rhabsyah/nodejs_automation:1.0 .'
             }
        }
     }
