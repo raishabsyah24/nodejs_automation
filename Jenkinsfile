@@ -19,7 +19,7 @@
         }
         stage("Build Image"){
             steps{
-                sh 'docker build -t nodejs_automation -f /home/garuda/Development/Sharingseason/nodejs_automation/Dockerfile'
+                sh 'docker build -t nodejs_automation -f /home/garuda/Development/Sharingseason/nodejs_automation/Dockerfile .'
             }
        }
     }
