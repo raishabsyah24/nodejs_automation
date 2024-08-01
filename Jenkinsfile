@@ -22,15 +22,15 @@
                 sh 'docker build -t my-node-app:1.0 .'
             }
        }
-       stage('Docker Push'){
-        steps{
-            withCredential([usernamePassword(credentialsId: 'docker_cred', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]){
-                sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
-                sh 'docker tag my-node-app:1.0 rhabsyah/nodejs_automation:1.0'
-                sh 'docker push rhabsyah/nodejs_automation:1.0'
-                sh 'docker logout'
-            }
-        }
-       }
+    //    stage('Docker Push'){
+    //     steps{
+    //         withCredential([usernamePassword(credentialsId: 'docker_cred', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]){
+    //             sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
+    //             sh 'docker tag my-node-app:1.0 rhabsyah/nodejs_automation:1.0'
+    //             sh 'docker push rhabsyah/nodejs_automation:1.0'
+    //             sh 'docker logout'
+    //         }
+    //     }
+    //    }
     }
  }
